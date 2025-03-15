@@ -10,6 +10,8 @@ a{
     text-decoration: none;
     color: black;
 }
+
+/* Header */
 header{
     position: fixed; 
     top: 0px;
@@ -20,40 +22,35 @@ header{
     background-color: white;
     z-index: 1;
 }
-
-header .header_inner{
+header .inner_box{
     position: relative;
     margin: auto;
     width: 1180px; height: 120px;
-    background-color: white;
 }
-
-header .header_inner .logo{
+header .inner_box .logo{
     position: absolute;
     left: 10px; bottom: 15px;
 }
-
-header .header_inner .utility{
+header .inner_box .utility{
     position: absolute;
     right: 30px; top: 20px;
 }
-header .header_inner .utility li{
+header .inner_box .utility li{
     display: inline; padding: 0px 10px;
     font-size: 12px;
 }
-header .header_inner .utility li a{
+header .utility a{
     color: darkgray;
 }
-
-header .header_inner .global{
+header .inner_box .global{
     position: absolute; 
     bottom: 0px; right: 0px;
 }
-header .header_inner .global li{
+header .inner_box .global li{
     display: inline;
-    padding: 0px 40px; margin: 0px 10px;
+    margin: 0px 40px;
 }
-header .header_inner .global li a:hover{
+header .global a:hover{
     color: lightgray;
 }
 
