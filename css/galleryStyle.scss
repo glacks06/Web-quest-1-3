@@ -1,0 +1,72 @@
+@use './main.scss' as m;
+
+*{
+    margin: 0px; padding: 0px;
+    line-height: 40px;
+    font-family: verdana;
+}
+ul {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+header{
+    @include m.header-CSS();
+}
+
+img{
+    display: block;
+    margin-top: 10px;
+}
+section{
+    width: 1000px; height: 1652px;
+    margin: auto;
+    position: relative; top: 120px;
+    article:nth-child(1), section article:nth-child(4){
+        margin-right: 10px;
+    }
+    ul li{
+        position: relative;
+    }
+    article{
+        position: relative;
+        float: left;
+        div{position: absolute}
+        .christmas{
+            right: 10px; bottom: 10px;
+            font-size: 30px; color: white;
+        }
+        .frozen{
+            top: 50px; left: 10px;
+            font-size: 20px; color: white;
+        }
+        .present{
+            right: 10px; bottom: 20px;
+            font-size: 20px; color: white;
+        }
+        .text4-1{
+            line-height: 17px;
+            width: 300px;
+            top: 160px; left: 95px;
+        }
+        .text4-2{
+            font-size: 40px; color: gold;
+            right: 20px; bottom: 30px;
+        }
+        .text6{
+            width: 620px; height: 50px;
+            font-size: 50px; color: white;
+            text-shadow: 4px 3px 0px black;
+            top: 160.5px; left: 190px;
+        }
+        .article7_inner{
+            width: 450px; height: 150px;
+            right: 30px; bottom: 40px;
+            font-size: 20px; color: white;
+        }
+    }
+}

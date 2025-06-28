@@ -1,0 +1,119 @@
+*{
+    margin: 0px; padding: 0px;
+    line-height: 40px;
+    font-family: verdana;
+    box-sizing: content-box;
+}
+ul {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@mixin header-CSS(){
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+
+    .inner_box{
+        position: relative;
+        margin: auto;
+        width: 1180px; height: 120px;
+
+        .logo{
+            position: absolute;
+            left: 10px; bottom: 15px;
+        }
+
+        .utility{
+            position: absolute;
+            right: 30px; top: 20px;
+            li{
+                display: inline; 
+                padding: 0px 10px;
+                font-size: 12px;
+            }
+            a{color: darkgray;}
+        }
+
+        .global{
+            position: absolute; 
+            bottom: 0px; right: 0px;
+            li{
+                display: inline;
+                margin: 0px 40px;
+            }
+            a:hover{color: lightgray;}
+        }
+    }
+}
+
+/* Header */
+header{
+    @include header-CSS();
+}
+
+/* Main Image */
+#main_Img{
+    background-image: url('../bg_main.png');
+    width: 100%; height: 590px;
+    overflow: hidden;
+    .inner_text{
+        width: 800px; height: 300px;
+        margin: 150px auto;
+        font-size: 25px;
+        color: white;
+        span{font-size: 80px;}
+    }
+}
+
+
+/* 4 article */
+#article_title{
+    display: block;
+    width: 150px;
+    margin: 25px auto;
+}
+section{
+    width: 1180px; height: 450px;
+    margin: auto;
+    article{
+        width: 230px; height: 450px;
+        padding: 0px 32.5px;
+        float: left;
+        line-height: 25px;
+    }
+}
+
+
+/* footer*/
+footer{
+    width: 100%; height: 150px;
+    background-color: rgb(34, 0, 58);
+    color: rgba(160, 160, 160, 0.788);
+    .inner_box{
+        position: relative;
+        top: 25px;
+        width: 1000px; height: 100px;
+        margin: auto;
+        .logo_footer{
+            position: absolute;
+            left: 10px; bottom: 15px;
+        }
+        ul{
+            position: absolute;
+            right: 20px; bottom: 15px;
+            li{
+                font-size: 13px;
+                display: inline; padding: 0px 5px;
+                a{
+                    display: inline-block;
+                    color: rgba(160, 160, 160, 0.788);
+                }
+                a:hover{color: rgba(83, 83, 83, 0.788);}
+            }
+        }
+    }
+}

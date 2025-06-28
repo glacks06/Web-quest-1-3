@@ -1,0 +1,268 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  line-height: 40px;
+  font-family: verdana;
+  box-sizing: content-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header */
+header {
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+}
+header .inner_box {
+  position: relative;
+  margin: auto;
+  width: 1180px;
+  height: 120px;
+}
+header .inner_box .logo {
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+}
+header .inner_box .utility {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+header .inner_box .utility li {
+  display: inline;
+  padding: 0px 10px;
+  font-size: 12px;
+}
+header .inner_box .utility a {
+  color: darkgray;
+}
+header .inner_box .global {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+header .inner_box .global li {
+  display: inline;
+  margin: 0px 40px;
+}
+header .inner_box .global a:hover {
+  color: lightgray;
+}
+
+/* Main Image */
+#main_Img {
+  background-image: url("../bg_main.png");
+  width: 100%;
+  height: 590px;
+  overflow: hidden;
+}
+#main_Img .inner_text {
+  width: 800px;
+  height: 300px;
+  margin: 150px auto;
+  font-size: 25px;
+  color: white;
+}
+#main_Img .inner_text span {
+  font-size: 80px;
+}
+
+/* 4 article */
+#article_title {
+  display: block;
+  width: 150px;
+  margin: 25px auto;
+}
+
+section {
+  width: 1180px;
+  height: 450px;
+  margin: auto;
+}
+section article {
+  width: 230px;
+  height: 450px;
+  padding: 0px 32.5px;
+  float: left;
+  line-height: 25px;
+}
+
+/* footer*/
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(34, 0, 58);
+  color: rgba(160, 160, 160, 0.788);
+}
+footer .inner_box {
+  position: relative;
+  top: 25px;
+  width: 1000px;
+  height: 100px;
+  margin: auto;
+}
+footer .inner_box .logo_footer {
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+}
+footer .inner_box ul {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+footer .inner_box ul li {
+  font-size: 13px;
+  display: inline;
+  padding: 0px 5px;
+}
+footer .inner_box ul li a {
+  display: inline-block;
+  color: rgba(160, 160, 160, 0.788);
+}
+footer .inner_box ul li a:hover {
+  color: rgba(83, 83, 83, 0.788);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  line-height: 40px;
+  font-family: verdana;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header */
+header {
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+}
+header .inner_box {
+  position: relative;
+  margin: auto;
+  width: 1180px;
+  height: 120px;
+}
+header .inner_box .logo {
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+}
+header .inner_box .utility {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+header .inner_box .utility li {
+  display: inline;
+  padding: 0px 10px;
+  font-size: 12px;
+}
+header .inner_box .utility a {
+  color: darkgray;
+}
+header .inner_box .global {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+header .inner_box .global li {
+  display: inline;
+  margin: 0px 40px;
+}
+header .inner_box .global a:hover {
+  color: lightgray;
+}
+
+img {
+  display: block;
+  margin-top: 10px;
+}
+
+section {
+  width: 1000px;
+  height: 1652px;
+  margin: auto;
+  position: relative;
+  top: 120px;
+}
+section article:nth-child(1), section section article:nth-child(4) {
+  margin-right: 10px;
+}
+section ul li {
+  position: relative;
+}
+section article {
+  position: relative;
+  float: left;
+}
+section article div {
+  position: absolute;
+}
+section article .christmas {
+  right: 10px;
+  bottom: 10px;
+  font-size: 30px;
+  color: white;
+}
+section article .frozen {
+  top: 50px;
+  left: 10px;
+  font-size: 20px;
+  color: white;
+}
+section article .present {
+  right: 10px;
+  bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+section article .text4-1 {
+  line-height: 17px;
+  width: 300px;
+  top: 160px;
+  left: 95px;
+}
+section article .text4-2 {
+  font-size: 40px;
+  color: gold;
+  right: 20px;
+  bottom: 30px;
+}
+section article .text6 {
+  width: 620px;
+  height: 50px;
+  font-size: 50px;
+  color: white;
+  text-shadow: 4px 3px 0px black;
+  top: 160.5px;
+  left: 190px;
+}
+section article .article7_inner {
+  width: 450px;
+  height: 150px;
+  right: 30px;
+  bottom: 40px;
+  font-size: 20px;
+  color: white;
+}
+
+/*# sourceMappingURL=galleryStyle.css.map */
