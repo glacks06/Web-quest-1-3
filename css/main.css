@@ -27,13 +27,17 @@ header .inner_box {
   width: 1180px;
   height: 120px;
 }
-header .inner_box .logo {
+header .inner_box h1 {
   position: absolute;
+}
+header .inner_box ul {
+  position: absolute;
+}
+header .inner_box .logo {
   left: 10px;
   bottom: 15px;
 }
 header .inner_box .utility {
-  position: absolute;
   right: 30px;
   top: 20px;
 }
@@ -46,7 +50,6 @@ header .inner_box .utility a {
   color: darkgray;
 }
 header .inner_box .global {
-  position: absolute;
   bottom: 0px;
   right: 0px;
 }

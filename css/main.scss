@@ -21,14 +21,12 @@ a{
         position: relative;
         margin: auto;
         width: 1180px; height: 120px;
+        h1{position: absolute;}
+        ul{position: absolute;}
 
-        .logo{
-            position: absolute;
-            left: 10px; bottom: 15px;
-        }
+        .logo{left: 10px; bottom: 15px;}
 
         .utility{
-            position: absolute;
             right: 30px; top: 20px;
             li{
                 display: inline; 
@@ -39,7 +37,6 @@ a{
         }
 
         .global{
-            position: absolute; 
             bottom: 0px; right: 0px;
             li{
                 display: inline;
