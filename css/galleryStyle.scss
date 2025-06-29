@@ -1,8 +1,9 @@
 @use './main.scss' as m;
 
 *{
-    margin: 0px; padding: 0px;
-    line-height: 40px;
+    // margin: 0px; padding: 0px;
+    // line-height: 40px;
+    box-sizing: border-box;
     font-family: verdana;
 }
 ul {
@@ -18,55 +19,59 @@ header{
     @include m.header-CSS();
 }
 
-img{
-    display: block;
-    margin-top: 10px;
+@mixin gallery_imgs($w, $h, $img){
+    width: $w;
+    height: $h;
+    background-image: url($img);
 }
+
 section{
     width: 1000px; height: 1652px;
-    margin: auto;
-    position: relative; top: 120px;
-    article:nth-child(1), section article:nth-child(4){
-        margin-right: 10px;
-    }
-    ul li{
-        position: relative;
-    }
+    margin: 120px auto;
+    position: relative;
+
     article{
-        position: relative;
-        float: left;
-        div{position: absolute}
-        .christmas{
-            right: 10px; bottom: 10px;
-            font-size: 30px; color: white;
-        }
-        .frozen{
-            top: 50px; left: 10px;
-            font-size: 20px; color: white;
-        }
-        .present{
-            right: 10px; bottom: 20px;
-            font-size: 20px; color: white;
-        }
-        .text4-1{
-            line-height: 17px;
-            width: 300px;
-            top: 160px; left: 95px;
-        }
-        .text4-2{
-            font-size: 40px; color: gold;
-            right: 20px; bottom: 30px;
-        }
-        .text6{
-            width: 620px; height: 50px;
-            font-size: 50px; color: white;
-            text-shadow: 4px 3px 0px black;
-            top: 160.5px; left: 190px;
-        }
-        .article7_inner{
-            width: 450px; height: 150px;
-            right: 30px; bottom: 40px;
-            font-size: 20px; color: white;
-        }
+        position: absolute;
+        background-repeat: no-repeat;
+        p{position: absolute}
     }
+    .img1-1{
+        @include gallery_imgs(700px, 400px, '../700x400.png');
+        p{right: 0; bottom: 0;}
+    }
+    .img1-2{
+        @include gallery_imgs(290px, 190px, '../290x190.png');
+        right: 0px;
+        p{top: 20px;}
+    }
+    .img1-3{
+        @include gallery_imgs(290px, 95px, '../290x95-1.png');
+        top: 200px; right: 0px;
+        p{right: 10px; top: 40px}
+    }
+    .img1-4{
+        @include gallery_imgs(290px, 95px, '../290x95-2.png');
+        top: 305px; right: 0;
+    }
+    .img2-1{
+        @include gallery_imgs(490px, 240px, '../490x240-1.png');
+        top: 410px;
+    }
+    .img2-2{
+        @include gallery_imgs(490px, 240px, '../490x240-2.png');
+        top: 660px;
+    }
+    .img2-3{
+        @include gallery_imgs(500px, 490px, '../500x490.png');
+        right: 0px; top: 410px;
+    }
+    .img3{
+        @include gallery_imgs(1000px, 371px, '../1000x371.png');
+        top: 910px;
+    }
+    .img4{
+        @include gallery_imgs(1000px, 361px, '../1000x361.png');
+        top: 1291px;
+    }
+
 }
