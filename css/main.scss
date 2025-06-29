@@ -75,7 +75,7 @@ header{
 }
 section{
     width: 1180px; height: 450px;
-    margin: auto;
+    margin: 0 auto;
     article{
         width: 230px; height: 450px;
         padding: 0px 32.5px;
@@ -104,11 +104,9 @@ footer{
             right: 20px; bottom: 15px;
             li{
                 font-size: 13px;
-                display: inline; padding: 0px 5px;
-                a{
-                    display: inline-block;
-                    color: rgba(160, 160, 160, 0.788);
-                }
+                display: inline;
+                padding: 0px 5px;
+                a{color: rgba(160, 160, 160, 0.788);}
                 a:hover{color: rgba(83, 83, 83, 0.788);}
             }
         }
