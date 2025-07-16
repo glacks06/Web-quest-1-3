@@ -1,0 +1,93 @@
+@use './mixins' as mixin;
+@use 'sass:math';
+
+*{
+    margin: 0px; padding: 0px;
+    line-height: 40px;
+    font-family: verdana;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+header{
+    @include mixin.header-CSS;
+}
+
+/* Main Image */
+$main_text_color: white;
+$main_text_title_font-size: 80px;
+$main_text_font-size: 25px;
+#main_Img{
+    background-image: url('../imgs/index_imgs/bg_main.png');
+    width: 100%; height: 590px;
+    overflow: hidden;
+    .inner_text{
+        width: 800px; height: 300px;
+        margin: 150px auto;
+        font-size: $main_text_font-size;
+        color: $main_text_color;
+        span{font-size: $main_text_title_font-size;}
+    }
+}
+
+
+/* 4 article */
+#article_title{
+    display: block;
+    width: 150px;
+    margin: 25px auto;
+}
+
+$news_width: 1180px;
+$news_article_gap: 32.5px;
+$news_article_width: math.div($news_width, 4) - ($news_article_gap*2);
+$news_article_hight: 450px;
+section{
+    width: $news_width;
+    height: $news_article_hight;
+    margin: 0 auto;
+    article{
+        width: $news_article_width; height: $news_article_hight;
+        margin: 0px $news_article_gap;
+        float: left;
+        line-height: 25px;
+    }
+}
+
+
+/* footer*/
+$footer_height: 150px;
+$footer_inner_width: 1000px;
+$footer_top_space: 50px;
+$footer_font_color: rgba(160, 160, 160, 0.788);
+$footer_font_color_hover: rgba(83, 83, 83, 0.788);
+$footer_bc_color: rgb(34, 0, 58);
+footer{
+    width: 100%; height: $footer_height;
+    overflow: hidden;
+    background-color: $footer_bc_color;
+    color: $footer_font-color;
+    .inner_box{
+        position: relative;
+        width: $footer_inner_width; 
+        margin: $footer_top_space auto;
+        ul{
+            position: absolute;
+            right: 0px; top: 0px;
+            li{
+                font-size: 13px;
+                display: inline-block;
+                padding: 0px 5px;
+                a{color: $footer_font_color;}
+                a:hover{color: $footer_font_color_hover;}
+            }
+        }
+    }
+}
