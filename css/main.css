@@ -16,14 +16,9 @@ a {
 }
 
 /* Header */
-header {
-  margin: auto;
-  width: 100%;
-  overflow: hidden;
-}
 header .inner_box {
   position: relative;
-  margin: auto;
+  margin: 0 auto;
   width: 1180px;
   height: 120px;
 }
@@ -55,7 +50,7 @@ header .inner_box .global {
 }
 header .inner_box .global li {
   display: inline;
-  margin: 0px 40px;
+  padding: 0px 40px;
 }
 header .inner_box .global a:hover {
   color: lightgray;

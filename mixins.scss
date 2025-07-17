@@ -2,13 +2,9 @@ $header_inner_width: 1180px;
 $header_inner_hight: 120px;
 
 @mixin header-CSS{
-    margin: auto;
-    width: 100%;
-    overflow: hidden;
-
     .inner_box{
         position: relative;
-        margin: auto;
+        margin: 0 auto;
         width: $header_inner_width; 
         height: $header_inner_hight;
         h1{position: absolute;}
@@ -30,7 +26,7 @@ $header_inner_hight: 120px;
             bottom: 0px; right: 0px;
             li{
                 display: inline;
-                margin: 0px 40px;
+                padding: 0px 40px;
             }
             a:hover{color: lightgray;}
         }
