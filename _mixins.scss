@@ -1,5 +1,9 @@
+@use 'sass:color';
+
 $header_inner_width: 1180px;
 $header_inner_hight: 120px;
+$header_global_font_color: black;
+$header_global_font_color_hover: color.adjust($header_global_font_color, $lightness: 80%);;
 
 @mixin header-CSS{
     .inner_box{
@@ -28,7 +32,8 @@ $header_inner_hight: 120px;
                 display: inline;
                 padding: 0px 40px;
             }
-            a:hover{color: lightgray;}
+            a{color: $header_global_font_color;}
+            a:hover{color: $header_global_font_color_hover;}
         }
     }
 }

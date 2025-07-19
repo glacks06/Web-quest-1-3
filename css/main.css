@@ -52,15 +52,17 @@ header .inner_box .global li {
   display: inline;
   padding: 0px 40px;
 }
+header .inner_box .global a {
+  color: black;
+}
 header .inner_box .global a:hover {
-  color: lightgray;
+  color: #cccccc;
 }
 
 /* Main Image */
 #main_Img {
   background-image: url("../imgs/index_imgs/bg_main.png");
   width: 100%;
-  height: 590px;
   overflow: hidden;
 }
 #main_Img .inner_text {
@@ -77,13 +79,12 @@ header .inner_box .global a:hover {
 /* 4 article */
 #article_title {
   display: block;
-  width: 150px;
+  text-align: center;
   margin: 25px auto;
 }
 
 section {
   width: 1180px;
-  height: 450px;
   margin: 0 auto;
 }
 section article {
@@ -121,7 +122,7 @@ footer .inner_box ul li a {
   color: rgba(160, 160, 160, 0.788);
 }
 footer .inner_box ul li a:hover {
-  color: rgba(83, 83, 83, 0.788);
+  color: rgba(109, 109, 109, 0.788);
 }
 
 /*# sourceMappingURL=main.css.map */
