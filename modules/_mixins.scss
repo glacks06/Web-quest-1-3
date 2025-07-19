@@ -1,0 +1,74 @@
+@use 'sass:color';
+@use './constants' as cons;
+
+
+@mixin header-CSS{
+    $header_global_font_color: cons.$default_a_color;
+    $header_global_font_color_hover: color.adjust($header_global_font_color, $lightness: 80%);
+    .inner_box{
+        position: relative;
+        margin: 0 auto;
+        width: cons.$header_inner_width; 
+        height: cons.$header_inner_hight;
+        h1{position: absolute;}
+        ul{position: absolute;}
+
+        .logo{left: cons.$header_logo_offset_x; bottom: cons.$header_logo_offset_y;}
+
+        .utility{
+            right: cons.$header_utility_offset_x; 
+            top: cons.$header_utility_offset_y;
+            li{
+                display: inline;
+                padding: 0px cons.$header_utility_padding_x;
+                font-size: cons.$header_utility_font_size;
+            }
+            a{color: darkgray;}
+        }
+
+        .global{
+            bottom: 0px; right: 0px;
+            li{
+                display: inline;
+                padding: 0px 40px;
+            }
+            a{color: $header_global_font_color;}
+            a:hover{color: $header_global_font_color_hover;}
+        }
+    }
+}
+@mixin gallery_imgs($w, $h, $img){
+    width: $w;
+    height: $h;
+    background-image: url($img);
+}
+@mixin center(){ // 수직 수평 중앙 정렬
+    text-align: center;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+@mixin footer-links{
+    $footer_font_color_hover: color.adjust(cons.$footer_font_color, $lightness: -20%);
+    width: 100%; height: cons.$footer_height;
+    overflow: hidden;
+    background-color: cons.$footer_bc_color;
+    color: cons.$footer_font-color;
+    .inner_box{
+        position: relative;
+        width: cons.$footer_inner_width; 
+        margin: cons.$footer_top_space auto;
+        ul{
+            position: absolute;
+            right: 0px; top: 0px;
+            li{
+                $footer_link_font_size: 13px;
+                display: inline-block;
+                padding: 0px cons.$footer_inform_padding_x;
+                a{color: cons.$footer_font_color;}
+                a:hover{color: $footer_font_color_hover;}
+            }
+        }
+    }
+}

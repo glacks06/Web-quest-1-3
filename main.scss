@@ -1,25 +1,21 @@
-@use './mixins' as mixin;
+@use './modules/mixins' as mixin;
+@use './modules/constants' as cons;
 @use 'sass:math';
 @use 'sass:color';
 
-$default_line-height: 40px;
-$default_fontStyle: verdana;
-$default_box-sizing: border-box;
-$default_margin: 0px;
-$default_padding: 0px;
-$default_a_color: black;
+
 *{
-    margin: $default_margin; padding: $default_padding;
-    line-height: $default_line-height;
-    font-family: $default_fontStyle;
-    box-sizing: $default_box-sizing;
+    margin: cons.$default_margin; padding: cons.$default_padding;
+    line-height: cons.$default_line_height;
+    font-family: cons.$default_fontStyle;
+    box-sizing: cons.$default_box_sizing;
 }
 ul {
     list-style-type: none;
 }
 a{
     text-decoration: none;
-    color: $default_a_color;
+    color: cons.$default_a_color;
 }
 
 /* Header */
@@ -28,46 +24,37 @@ header{
 }
 
 /* Main Image */
-$main_text_color: white;
-$main_text_title_font-size: 80px;
-$main_text_font-size: 25px;
-$main_text_width: 800px;
-$main_text_height: 300px;
 #main_Img{
     background-image: url('../imgs/index_imgs/bg_main.png');
     width: 100%;
-    // height: 590px;
     overflow: hidden;
     .inner_text{
-        width: $main_text_width; height: $main_text_height;
+        width: cons.$main_text_width; height: cons.$main_text_height;
         margin: 150px auto;
-        font-size: $main_text_font-size;
-        color: $main_text_color;
+        font-size: cons.$main_text_font_size;
+        color: cons.$main_text_color;
         
-        span{font-size: $main_text_title_font-size;}
+        span{font-size: cons.$main_text_title_font_size;}
     }
 }
 
 
 /* 4 article */
-$news_titile_margin-y: 25px;
 #article_title{
     display: block;
     text-align: center;
-    margin: $news_titile_margin-y auto;
+    margin: cons.$news_title_margin_y auto;
 }
 
-$news_width: 1180px;
-$news_article_gap: 32.5px;
-$news_article_width: math.div($news_width, 4) - ($news_article_gap*2);
-$news_article_hight: 450px;
+
+$news_article_width: math.div(cons.$news_width, 4) - (cons.$news_article_gap*2);
 section{
-    width: $news_width;
+    width: cons.$news_width;
     margin: 0 auto;
     article{
         width: $news_article_width; 
-        height: $news_article_hight;
-        margin: 0px $news_article_gap;
+        height: cons.$news_article_hight;
+        margin: 0px cons.$news_article_gap;
         float: left;
         line-height: 25px;
     }
@@ -75,32 +62,7 @@ section{
 
 
 /* footer*/
-$footer_height: 150px;
-$footer_inner_width: 1000px;
-$footer_top_space: 50px;
-$footer_font_color: rgba(160, 160, 160, 0.788);
-$footer_font_color_hover: color.adjust($footer_font_color, $lightness: -20%);
-$footer_bc_color: rgb(34, 0, 58);
-$footer_inform_padding-x: 5px;
+$footer_font_color_hover: color.adjust(cons.$footer_font_color, $lightness: -20%);
 footer{
-    width: 100%; height: $footer_height;
-    overflow: hidden;
-    background-color: $footer_bc_color;
-    color: $footer_font-color;
-    .inner_box{
-        position: relative;
-        width: $footer_inner_width; 
-        margin: $footer_top_space auto;
-        ul{
-            position: absolute;
-            right: 0px; top: 0px;
-            li{
-                font-size: 13px;
-                display: inline-block;
-                padding: 0px $footer_inform_padding-x;
-                a{color: $footer_font_color;}
-                a:hover{color: $footer_font_color_hover;}
-            }
-        }
-    }
+    @include mixin.footer-links;
 }

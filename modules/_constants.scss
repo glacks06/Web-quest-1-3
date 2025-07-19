@@ -1,0 +1,43 @@
+// defaults
+$default_line_height: 40px;
+$default_fontStyle: verdana;
+$default_box_sizing: border-box;
+$default_margin: 0px;
+$default_padding: 0px;
+$default_a_color: black;
+
+// header
+$header_inner_width: 1180px;
+$header_inner_hight: 120px;
+$header_logo_offset_x: 10px;
+$header_logo_offset_y: 15px;
+
+$header_utility_padding_x: 10px;
+$header_utility_offset_x: 30px;
+$header_utility_offset_y: 20px;
+$header_utility_font_size: 12px;
+
+$header_global_offset_x: 0px;
+$header_global_offset_y: 0px;
+
+// main img
+$main_text_color: white;
+$main_text_title_font_size: 80px;
+$main_text_font_size: 25px;
+$main_text_width: 800px;
+$main_text_height: 300px;
+
+// article(recent news)
+$news_title_margin_y: 25px;
+$news_width: 1180px;
+$news_article_gap: 32.5px;
+$news_article_hight: 450px;
+
+// footer
+$footer_height: 150px;
+$footer_inner_width: 1000px;
+$footer_top_space: 50px;
+$footer_font_color: rgba(160, 160, 160, 0.788);
+$footer_bc_color: rgb(34, 0, 58);
+$footer_inform_padding_x: 5px;
+$footer_link_font_size: 13px;
