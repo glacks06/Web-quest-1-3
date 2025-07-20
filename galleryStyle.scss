@@ -20,10 +20,6 @@ header{
 }
 
 // gallery Imgs
-$gallery_imgs_gap: 10px;
-$gallery_imgs_height: (400px, 190px, 95px, 95px, 240px, 240px, 490px, 371px, 361px); // 각 img들의 height 값
-
-
 section{
     width: 1000px; height: 1652px;
     margin: 120px auto;
@@ -46,10 +42,10 @@ section{
             $imgs_top: list.set-nth($imgs_top, $i, 0);
         }
         @else if $i == 7{
-            $imgs_top: list.set-nth($imgs_top, $i, list.nth($imgs_top, $i - 3) + list.nth($gallery_imgs_height, $i - 3) + $gallery_imgs_gap);
+            $imgs_top: list.set-nth($imgs_top, $i, list.nth($imgs_top, $i - 3) + list.nth(cons.$gallery_imgs_height, $i - 3) + cons.$gallery_imgs_gap);
         }
         @else{
-            $imgs_top: list.set-nth($imgs_top, $i, list.nth($imgs_top, $i - 1) + list.nth($gallery_imgs_height, $i - 1) + $gallery_imgs_gap);
+            $imgs_top: list.set-nth($imgs_top, $i, list.nth($imgs_top, $i - 1) + list.nth(cons.$gallery_imgs_height, $i - 1) + cons.$gallery_imgs_gap);
         }
 
         $item: list.nth(cons.$img_sources, $i);

@@ -58,3 +58,5 @@ $img_sources: (
     (1000px, 371px, '../imgs/gallery_imgs/1000x371.png'),
     (1000px, 361px, '../imgs/gallery_imgs/1000x361.png')
 );
+$gallery_imgs_gap: 10px;
+$gallery_imgs_height: (400px, 190px, 95px, 95px, 240px, 240px, 490px, 371px, 361px); // 각 img들의 height 값
