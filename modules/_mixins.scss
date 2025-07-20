@@ -1,5 +1,6 @@
 @use 'sass:color';
 @use './constants' as cons;
+@use "sass:list";
 
 
 @mixin header-CSS{
@@ -38,10 +39,14 @@
         }
     }
 }
-@mixin gallery_imgs($w, $h, $img){
+@mixin gallery_imgs($w, $h, $img, $top, $index){
     width: $w;
     height: $h;
     background-image: url($img);
+    top: $top;
+    @if list.index(cons.$right_side_imgs, $index){ // 오른쪽에 위치해야 하는 이미지들
+        right: 0px;
+    }
 }
 @mixin center(){ // 수직 수평 중앙 정렬
     text-align: center;

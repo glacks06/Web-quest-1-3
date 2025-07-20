@@ -60,3 +60,47 @@ $img_sources: (
 );
 $gallery_imgs_gap: 10px;
 $gallery_imgs_height: (400px, 190px, 95px, 95px, 240px, 240px, 490px, 371px, 361px); // 각 img들의 height 값
+
+// === .img1 ===
+$img1-p-right: 10px;
+$img1-p-bottom: 10px;
+$img1-p-font-size: 30px;
+
+// === .img2 ===
+$img2-p-top: 50px;
+$img2-p-left: 10px;
+$img2-p-font-size: 20px;
+
+// === .img3 ===
+$img3-p-right: 10px;
+$img3-p-bottom: 20px;
+$img3-p-font-size: 20px;
+
+// === .img5 ===
+$img5-p-top: 160px;
+$img5-p-left: 95px;
+$img5-p-line-height: 17px;
+$img5-p-color: black;
+
+// === .img6 ===
+$img6-p-right: 20px;
+$img6-p-bottom: 30px;
+$img6-p-color: gold;
+$img6-p-font-size: 40px;
+
+// === .img8 ===
+$img8-p-margin-top: 0px;
+$img8-p-width: 100%;
+$img8-p-font-size: 50px;
+$img8-p-text-shadow-x: 4px;
+$img8-p-text-shadow-y: 3px;
+$img8-p-text-shadow-blur: 0px;
+$img8-p-text-shadow-color: black;
+
+// === .img9 ===
+$img9-p-right: 30px;
+$img9-p-bottom: 40px;
+$img9-p-font-size: 20px;
+$img9-p-span-font-size: 30px;
+
+$right_side_imgs: (2, 3, 4, 7);
