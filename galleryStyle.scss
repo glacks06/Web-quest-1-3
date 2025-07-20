@@ -1,8 +1,13 @@
-@use './mixins' as m;
+@use './modules/mixins' as mixin;
+@use './modules/constants' as cons;
+@use "sass:list";
+
 
 *{
-    box-sizing: border-box;
-    font-family: verdana;
+    margin: cons.$default_margin; padding: cons.$default_padding;
+    line-height: cons.$default_line_height;
+    font-family: cons.$default_fontStyle;
+    box-sizing: cons.$default_box_sizing;
 }
 a{
     text-decoration: none;
@@ -11,30 +16,13 @@ a{
 
 /* Header */
 header{
-    @include m.header-CSS;
+    @include mixin.header-CSS;
 }
 
+// gallery Imgs
 $gallery_imgs_gap: 10px;
+$gallery_imgs_height: (400px, 190px, 95px, 95px, 240px, 240px, 490px, 371px, 361px); // 각 img들의 height 값
 
-$img1-1_height: 400px;
-$img1-2_height: 190px;
-$img1-3_height: 95px;
-$img1-4_height: 95px;
-$img2-1_height: 240px;
-$img2-2_height: 240px;
-$img2-3_height: 490px;
-$img3_height: 371px;
-$img4_height: 361px;
-
-$img1-2_top: 0px;
-$img1-1_top: 0px;
-$img1-3_top: $img1-2_top + $img1-2_height + $gallery_imgs_gap;
-$img1-4_top: $img1-3_top + $img1-3_height + $gallery_imgs_gap;
-$img2-1_top: $img1-1_top + $img1-1_height + $gallery_imgs_gap;
-$img2-2_top: $img2-1_top + $img2-1_height + $gallery_imgs_gap;
-$img2-3_top: $img1-4_top + $img1-4_height + $gallery_imgs_gap;
-$img3_top: $img2-2_top + $img2-2_height + $gallery_imgs_gap;
-$img4_top: $img3_top + $img3_height + $gallery_imgs_gap;
 
 section{
     width: 1000px; height: 1652px;
@@ -47,57 +35,62 @@ section{
         background-repeat: no-repeat;
         p{position: absolute}
     }
-    .img1-1{
-        @include m.gallery_imgs(700px, 400px, '../imgs/gallery_imgs/700x400.png');
-        top: $img1-1_top;
+
+    // gallery img들의 top값들 계산
+    $imgs_top: ();
+    @for $i from 1 through list.length(cons.$img_sources){
+        $imgs_top: list.append($imgs_top, 0);
+    }
+    @for $i from 1 through list.length($imgs_top){
+        @if $i == 1 or $i == 2{
+            $imgs_top: list.set-nth($imgs_top, $i, 0);
+        }
+        @else if $i == 7{
+            $imgs_top: list.set-nth($imgs_top, $i, list.nth($imgs_top, $i - 3) + list.nth($gallery_imgs_height, $i - 3) + $gallery_imgs_gap);
+        }
+        @else{
+            $imgs_top: list.set-nth($imgs_top, $i, list.nth($imgs_top, $i - 1) + list.nth($gallery_imgs_height, $i - 1) + $gallery_imgs_gap);
+        }
+
+        $item: list.nth(cons.$img_sources, $i);
+        $w: list.nth($item, 1);
+        $h: list.nth($item, 2);
+        $path: list.nth($item, 3);
+
+        .img#{$i}{
+            @include mixin.gallery_imgs($w, $h, $path);
+            top: list.nth($imgs_top, $i);
+            @if $i == 2 or $i == 3 or $i == 4 or $i == 7{
+                right: 0px;
+            }
+        }
+    }
+
+    .img1{
         p{right: 10px; bottom: 10px; font-size: 30px;}
     }
-    .img1-2{
-        @include m.gallery_imgs(290px, 190px, '../imgs/gallery_imgs/290x190.png');
-        top: $img1-2_top;
-        right: 0px;
+    .img2{
         p{top: 50px; left: 10px; font-size: 20px;}
     }
-    .img1-3{
-        @include m.gallery_imgs(290px, 95px, '../imgs/gallery_imgs/290x95-1.png');
-        top: $img1-3_top; 
-        right: 0px;
+    .img3{
         p{right: 10px; bottom: 20px; font-size: 20px;}
     }
-    .img1-4{
-        @include m.gallery_imgs(290px, 95px, '../imgs/gallery_imgs/290x95-2.png');
-        top: $img1-4_top;
-        right: 0;
-    }
-    .img2-1{
-        @include m.gallery_imgs(490px, 240px, '../imgs/gallery_imgs/490x240-1.png');
-        top: $img2-1_top;
+    .img5{
         p{top: 160px; left: 95px; line-height: 17px; color: black;}
     }
-    .img2-2{
-        @include m.gallery_imgs(490px, 240px, '../imgs/gallery_imgs/490x240-2.png');
-        top: $img2-2_top;
+    .img6{
         p{right: 20px; bottom: 30px; color: gold; font-size: 40px;}
     }
-    .img2-3{
-        @include m.gallery_imgs(500px, 490px, '../imgs/gallery_imgs/500x490.png');
-        right: 0px; 
-        top: $img2-3_top;
-    }
-    .img3{
-        @include m.gallery_imgs(1000px, 371px, '../imgs/gallery_imgs/1000x371.png');
-        top: $img3_top;
+    .img8{
         p{
             margin-top: 0px;
             width: 100%;
-            @include m.center();
+            @include mixin.center();
             font-size: 50px;
             text-shadow: 4px 3px 0px black;
         }
     }
-    .img4{
-        @include m.gallery_imgs(1000px, 361px, '../imgs/gallery_imgs/1000x361.png');
-        top: $img4_top;
+    .img9{
         p{
             right: 30px; bottom: 40px;
             font-size: 20px;

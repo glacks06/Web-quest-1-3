@@ -8,7 +8,7 @@ $default_a_color: black;
 
 // header
 $header_inner_width: 1180px;
-$header_inner_hight: 120px;
+$header_inner_height: 120px;
 $header_logo_offset_x: 10px;
 $header_logo_offset_y: 15px;
 
@@ -19,6 +19,7 @@ $header_utility_font_size: 12px;
 
 $header_global_offset_x: 0px;
 $header_global_offset_y: 0px;
+$header_global_padding_x: 40px;
 
 // main img
 $main_text_color: white;
@@ -31,7 +32,7 @@ $main_text_height: 300px;
 $news_title_margin_y: 25px;
 $news_width: 1180px;
 $news_article_gap: 32.5px;
-$news_article_hight: 450px;
+$news_article_height: 450px;
 
 // footer
 $footer_height: 150px;
@@ -39,5 +40,21 @@ $footer_inner_width: 1000px;
 $footer_top_space: 50px;
 $footer_font_color: rgba(160, 160, 160, 0.788);
 $footer_bc_color: rgb(34, 0, 58);
+
 $footer_inform_padding_x: 5px;
 $footer_link_font_size: 13px;
+$footer_link_offset_x: 0px;
+$footer_link_offset_y: 0px;
+
+// gallery
+$img_sources: (
+    (700px, 400px, '../imgs/gallery_imgs/700x400.png'),
+    (290px, 190px, '../imgs/gallery_imgs/290x190.png'),
+    (290px, 95px, '../imgs/gallery_imgs/290x95-1.png'),
+    (290px, 95px, '../imgs/gallery_imgs/290x95-2.png'),
+    (490px, 240px, '../imgs/gallery_imgs/490x240-1.png'),
+    (490px, 240px, '../imgs/gallery_imgs/490x240-2.png'),
+    (500px, 490px, '../imgs/gallery_imgs/500x490.png'),
+    (1000px, 371px, '../imgs/gallery_imgs/1000x371.png'),
+    (1000px, 361px, '../imgs/gallery_imgs/1000x361.png')
+);

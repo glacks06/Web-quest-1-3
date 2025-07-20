@@ -45,8 +45,8 @@ header .inner_box .utility a {
   color: darkgray;
 }
 header .inner_box .global {
-  bottom: 0px;
   right: 0px;
+  bottom: 0px;
 }
 header .inner_box .global li {
   display: inline;
@@ -114,6 +114,7 @@ footer .inner_box ul {
   top: 0px;
 }
 footer .inner_box ul li {
+  font-size: 13px;
   display: inline-block;
   padding: 0px 5px;
 }
