@@ -1,6 +1,9 @@
 * {
-  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  line-height: 40px;
   font-family: verdana;
+  box-sizing: border-box;
 }
 
 a {
@@ -9,14 +12,9 @@ a {
 }
 
 /* Header */
-header {
-  margin: auto;
-  width: 100%;
-  overflow: hidden;
-}
 header .inner_box {
   position: relative;
-  margin: auto;
+  margin: 0 auto;
   width: 1180px;
   height: 120px;
 }
@@ -43,111 +41,141 @@ header .inner_box .utility a {
   color: darkgray;
 }
 header .inner_box .global {
-  bottom: 0px;
   right: 0px;
+  bottom: 0px;
 }
 header .inner_box .global li {
   display: inline;
-  margin: 0px 40px;
+  padding: 0px 40px;
+}
+header .inner_box .global a {
+  color: black;
 }
 header .inner_box .global a:hover {
-  color: lightgray;
+  color: #cccccc;
 }
 
 section {
   width: 1000px;
-  height: 1652px;
   margin: 120px auto;
   position: relative;
-  color: white;
-}
-section article {
-  position: absolute;
-  background-repeat: no-repeat;
 }
 section article p {
   position: absolute;
 }
-section .img1-1 {
+section .img1 {
+  position: absolute;
   width: 700px;
   height: 400px;
+  top: 0;
   background-image: url("../imgs/gallery_imgs/700x400.png");
-  top: 0px;
+  background-repeat: no-repeat;
+  color: white;
 }
-section .img1-1 p {
+section .img2 {
+  position: absolute;
+  width: 290px;
+  height: 190px;
+  top: 0;
+  background-image: url("../imgs/gallery_imgs/290x190.png");
+  background-repeat: no-repeat;
+  color: white;
+  right: 0px;
+}
+section .img3 {
+  position: absolute;
+  width: 290px;
+  height: 95px;
+  top: 200px;
+  background-image: url("../imgs/gallery_imgs/290x95-1.png");
+  background-repeat: no-repeat;
+  color: white;
+  right: 0px;
+}
+section .img4 {
+  position: absolute;
+  width: 290px;
+  height: 95px;
+  top: 305px;
+  background-image: url("../imgs/gallery_imgs/290x95-2.png");
+  background-repeat: no-repeat;
+  color: white;
+  right: 0px;
+}
+section .img5 {
+  position: absolute;
+  width: 490px;
+  height: 240px;
+  top: 410px;
+  background-image: url("../imgs/gallery_imgs/490x240-1.png");
+  background-repeat: no-repeat;
+  color: white;
+}
+section .img6 {
+  position: absolute;
+  width: 490px;
+  height: 240px;
+  top: 660px;
+  background-image: url("../imgs/gallery_imgs/490x240-2.png");
+  background-repeat: no-repeat;
+  color: white;
+}
+section .img7 {
+  position: absolute;
+  width: 500px;
+  height: 490px;
+  top: 410px;
+  background-image: url("../imgs/gallery_imgs/500x490.png");
+  background-repeat: no-repeat;
+  color: white;
+  right: 0px;
+}
+section .img8 {
+  position: absolute;
+  width: 1000px;
+  height: 371px;
+  top: 910px;
+  background-image: url("../imgs/gallery_imgs/1000x371.png");
+  background-repeat: no-repeat;
+  color: white;
+}
+section .img9 {
+  position: absolute;
+  width: 1000px;
+  height: 361px;
+  top: 1291px;
+  background-image: url("../imgs/gallery_imgs/1000x361.png");
+  background-repeat: no-repeat;
+  color: white;
+}
+section .img1 p {
   right: 10px;
   bottom: 10px;
   font-size: 30px;
 }
-section .img1-2 {
-  width: 290px;
-  height: 190px;
-  background-image: url("../imgs/gallery_imgs/290x190.png");
-  top: 0px;
-  right: 0px;
-}
-section .img1-2 p {
+section .img2 p {
   top: 50px;
   left: 10px;
   font-size: 20px;
 }
-section .img1-3 {
-  width: 290px;
-  height: 95px;
-  background-image: url("../imgs/gallery_imgs/290x95-1.png");
-  top: 200px;
-  right: 0px;
-}
-section .img1-3 p {
+section .img3 p {
   right: 10px;
   bottom: 20px;
   font-size: 20px;
 }
-section .img1-4 {
-  width: 290px;
-  height: 95px;
-  background-image: url("../imgs/gallery_imgs/290x95-2.png");
-  top: 305px;
-  right: 0;
-}
-section .img2-1 {
-  width: 490px;
-  height: 240px;
-  background-image: url("../imgs/gallery_imgs/490x240-1.png");
-  top: 410px;
-}
-section .img2-1 p {
+section .img5 p {
   top: 160px;
   left: 95px;
-  line-height: 17px;
   color: black;
+  line-height: 17px;
 }
-section .img2-2 {
-  width: 490px;
-  height: 240px;
-  background-image: url("../imgs/gallery_imgs/490x240-2.png");
-  top: 660px;
-}
-section .img2-2 p {
+section .img6 p {
   right: 20px;
   bottom: 30px;
-  color: gold;
   font-size: 40px;
+  color: gold;
 }
-section .img2-3 {
-  width: 500px;
-  height: 490px;
-  background-image: url("../imgs/gallery_imgs/500x490.png");
-  right: 0px;
-  top: 410px;
-}
-section .img3 {
-  width: 1000px;
-  height: 371px;
-  background-image: url("../imgs/gallery_imgs/1000x371.png");
-  top: 910px;
-}
-section .img3 p {
+section .img8 p {
   margin-top: 0px;
   width: 100%;
   text-align: center;
@@ -157,18 +185,12 @@ section .img3 p {
   font-size: 50px;
   text-shadow: 4px 3px 0px black;
 }
-section .img4 {
-  width: 1000px;
-  height: 361px;
-  background-image: url("../imgs/gallery_imgs/1000x361.png");
-  top: 1291px;
-}
-section .img4 p {
+section .img9 p {
   right: 30px;
   bottom: 40px;
   font-size: 20px;
 }
-section .img4 p span {
+section .img9 p span {
   font-size: 30px;
 }
 

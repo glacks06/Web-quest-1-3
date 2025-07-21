@@ -1,8 +1,13 @@
-@use './mixins' as m;
+@use './modules/mixins' as mixin;
+@use './modules/constants' as cons;
+@use "sass:list";
+@use "sass:map";
 
 *{
-    box-sizing: border-box;
-    font-family: verdana;
+    margin: cons.$default_margin; padding: cons.$default_padding;
+    line-height: cons.$default_line_height;
+    font-family: cons.$default_fontStyle;
+    box-sizing: cons.$default_box_sizing;
 }
 a{
     text-decoration: none;
@@ -11,97 +16,63 @@ a{
 
 /* Header */
 header{
-    @include m.header-CSS;
+    @include mixin.header-CSS;
 }
 
-$gallery_imgs_gap: 10px;
-
-$img1-1_height: 400px;
-$img1-2_height: 190px;
-$img1-3_height: 95px;
-$img1-4_height: 95px;
-$img2-1_height: 240px;
-$img2-2_height: 240px;
-$img2-3_height: 490px;
-$img3_height: 371px;
-$img4_height: 361px;
-
-$img1-2_top: 0px;
-$img1-1_top: 0px;
-$img1-3_top: $img1-2_top + $img1-2_height + $gallery_imgs_gap;
-$img1-4_top: $img1-3_top + $img1-3_height + $gallery_imgs_gap;
-$img2-1_top: $img1-1_top + $img1-1_height + $gallery_imgs_gap;
-$img2-2_top: $img2-1_top + $img2-1_height + $gallery_imgs_gap;
-$img2-3_top: $img1-4_top + $img1-4_height + $gallery_imgs_gap;
-$img3_top: $img2-2_top + $img2-2_height + $gallery_imgs_gap;
-$img4_top: $img3_top + $img3_height + $gallery_imgs_gap;
-
+// gallery Imgs
 section{
-    width: 1000px; height: 1652px;
-    margin: 120px auto;
+    width: cons.$gallery_section_width;
+    margin: cons.$gallery_section_margin_y auto;
     position: relative;
-    color: white;
 
     article{
-        position: absolute;
-        background-repeat: no-repeat;
         p{position: absolute}
     }
-    .img1-1{
-        @include m.gallery_imgs(700px, 400px, '../imgs/gallery_imgs/700x400.png');
-        top: $img1-1_top;
-        p{right: 10px; bottom: 10px; font-size: 30px;}
-    }
-    .img1-2{
-        @include m.gallery_imgs(290px, 190px, '../imgs/gallery_imgs/290x190.png');
-        top: $img1-2_top;
-        right: 0px;
-        p{top: 50px; left: 10px; font-size: 20px;}
-    }
-    .img1-3{
-        @include m.gallery_imgs(290px, 95px, '../imgs/gallery_imgs/290x95-1.png');
-        top: $img1-3_top; 
-        right: 0px;
-        p{right: 10px; bottom: 20px; font-size: 20px;}
-    }
-    .img1-4{
-        @include m.gallery_imgs(290px, 95px, '../imgs/gallery_imgs/290x95-2.png');
-        top: $img1-4_top;
-        right: 0;
-    }
-    .img2-1{
-        @include m.gallery_imgs(490px, 240px, '../imgs/gallery_imgs/490x240-1.png');
-        top: $img2-1_top;
-        p{top: 160px; left: 95px; line-height: 17px; color: black;}
-    }
-    .img2-2{
-        @include m.gallery_imgs(490px, 240px, '../imgs/gallery_imgs/490x240-2.png');
-        top: $img2-2_top;
-        p{right: 20px; bottom: 30px; color: gold; font-size: 40px;}
-    }
-    .img2-3{
-        @include m.gallery_imgs(500px, 490px, '../imgs/gallery_imgs/500x490.png');
-        right: 0px; 
-        top: $img2-3_top;
-    }
-    .img3{
-        @include m.gallery_imgs(1000px, 371px, '../imgs/gallery_imgs/1000x371.png');
-        top: $img3_top;
-        p{
-            margin-top: 0px;
-            width: 100%;
-            @include m.center();
-            font-size: 50px;
-            text-shadow: 4px 3px 0px black;
+
+    // gallery img들의 top값들 계산 및 img property 설정
+    $imgs_top: ();
+    @for $i from 1 through list.length(cons.$img_sources){
+        @if $i == 1 or $i == 2{
+            $imgs_top: list.append($imgs_top, 0);
+        }
+        @else if $i == 7{
+            $imgs_top: list.append($imgs_top, list.nth($imgs_top, $i - 3) + list.nth(cons.$gallery_imgs_height, $i - 3) + cons.$gallery_imgs_gap);
+        }
+        @else{
+            $imgs_top: list.append($imgs_top, list.nth($imgs_top, $i - 1) + list.nth(cons.$gallery_imgs_height, $i - 1) + cons.$gallery_imgs_gap);
+        }
+
+        $item: list.nth(cons.$img_sources, $i);
+        $w: list.nth($item, 1);
+        $h: list.nth($item, 2);
+        $path: list.nth($item, 3);
+        $top: list.nth($imgs_top, $i);
+        .img#{$i}{
+            @include mixin.gallery-imgs($w, $h, $path, $top, $i);
         }
     }
-    .img4{
-        @include m.gallery_imgs(1000px, 361px, '../imgs/gallery_imgs/1000x361.png');
-        top: $img4_top;
-        p{
-            right: 30px; bottom: 40px;
-            font-size: 20px;
-            span{font-size: 30px;}
+
+    .img1 {p {@include mixin.img-text-style(1);}}
+    .img2 {p {@include mixin.img-text-style(2);}}
+    .img3 {p {@include mixin.img-text-style(3);}}
+    .img5 {p {@include mixin.img-text-style(5);}}
+    .img6 {p {@include mixin.img-text-style(6);}}
+    .img8 {
+        p {
+            margin-top: cons.$img8_p_margin_top;
+            width: cons.$img8_p_width;
+            @include mixin.center();
+            @include mixin.img-text-style(8);
+            text-shadow: cons.$img8_p_text_shadow_x
+                        cons.$img8_p_text_shadow_y
+                        cons.$img8_p_text_shadow_blur
+                        cons.$img8_p_text_shadow_color;
+        }
+    }
+    .img9 {
+        p {
+            @include mixin.img-text-style(9);
+            span {font-size: cons.$img9_p_span_font_size;}
         }
     }
 }

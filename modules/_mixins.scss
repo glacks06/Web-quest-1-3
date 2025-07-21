@@ -1,5 +1,7 @@
 @use 'sass:color';
 @use './constants' as cons;
+@use "sass:list";
+@use "sass:map";
 
 
 @mixin header-CSS{
@@ -9,7 +11,7 @@
         position: relative;
         margin: 0 auto;
         width: cons.$header_inner_width; 
-        height: cons.$header_inner_hight;
+        height: cons.$header_inner_height;
         h1{position: absolute;}
         ul{position: absolute;}
 
@@ -27,25 +29,33 @@
         }
 
         .global{
-            bottom: 0px; right: 0px;
+            right: cons.$header_global_offset_x;
+            bottom: cons.$header_global_offset_y; 
             li{
                 display: inline;
-                padding: 0px 40px;
+                padding: 0px cons.$header_global_padding_x;
             }
             a{color: $header_global_font_color;}
             a:hover{color: $header_global_font_color_hover;}
         }
     }
 }
-@mixin gallery_imgs($w, $h, $img){
+@mixin gallery-imgs($w, $h, $img, $top, $index){
+    position: absolute;
     width: $w;
     height: $h;
+    top: $top;
     background-image: url($img);
+    background-repeat: no-repeat;
+    color: white;
+    @if list.index(cons.$right_side_imgs, $index){ // 오른쪽에 위치해야 하는 이미지들
+        right: 0px;
+    }
 }
 @mixin center(){ // 수직 수평 중앙 정렬
     text-align: center;
     left: 50%; 
-    top: 50%; 
+    top: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -61,9 +71,10 @@
         margin: cons.$footer_top_space auto;
         ul{
             position: absolute;
-            right: 0px; top: 0px;
+            right: cons.$footer_link_offset_x; 
+            top: cons.$footer_link_offset_y;
             li{
-                $footer_link_font_size: 13px;
+                font-size: cons.$footer_link_font_size;
                 display: inline-block;
                 padding: 0px cons.$footer_inform_padding_x;
                 a{color: cons.$footer_font_color;}
@@ -71,4 +82,15 @@
             }
         }
     }
+}
+
+@mixin img-text-style($idx){
+    $style: map.get(cons.$img_text_style_map, $idx);
+    @if map.has-key($style, top)        { top: map.get($style, top); }
+    @if map.has-key($style, left)       { left: map.get($style, left); }
+    @if map.has-key($style, right)      { right: map.get($style, right); }
+    @if map.has-key($style, bottom)     { bottom: map.get($style, bottom); }
+    @if map.has-key($style, font-size)  { font-size: map.get($style, font-size); }
+    @if map.has-key($style, color)      {color: map.get($style, color);}
+    @if map.has-key($style, line-height){line-height: map.get($style, line-height);}
 }
