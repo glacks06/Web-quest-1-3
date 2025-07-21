@@ -2,7 +2,6 @@
 @use './modules/constants' as cons;
 @use "sass:list";
 
-
 *{
     margin: cons.$default_margin; padding: cons.$default_padding;
     line-height: cons.$default_line_height;
@@ -21,14 +20,11 @@ header{
 
 // gallery Imgs
 section{
-    width: 1000px; height: 1652px;
-    margin: 120px auto;
+    width: cons.$gallery_section_width;
+    margin: cons.$gallery_section_margin_y auto;
     position: relative;
-    color: white;
 
     article{
-        position: absolute;
-        background-repeat: no-repeat;
         p{position: absolute}
     }
 
@@ -51,7 +47,7 @@ section{
         $path: list.nth($item, 3);
         $top: list.nth($imgs_top, $i);
         .img#{$i}{
-            @include mixin.gallery_imgs($w, $h, $path, $top, $i);
+            @include mixin.gallery-imgs($w, $h, $path, $top, $i);
         }
     }
 

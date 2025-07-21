@@ -57,75 +57,99 @@ header .inner_box .global a:hover {
 
 section {
   width: 1000px;
-  height: 1652px;
   margin: 120px auto;
   position: relative;
-  color: white;
 }
 section article {
-  position: absolute;
   background-repeat: no-repeat;
 }
 section article p {
   position: absolute;
 }
 section .img1 {
+  position: absolute;
   width: 700px;
   height: 400px;
-  background-image: url("../imgs/gallery_imgs/700x400.png");
   top: 0;
+  background-image: url("../imgs/gallery_imgs/700x400.png");
+  background-repeat: no-repeat;
+  color: white;
 }
 section .img2 {
+  position: absolute;
   width: 290px;
   height: 190px;
-  background-image: url("../imgs/gallery_imgs/290x190.png");
   top: 0;
+  background-image: url("../imgs/gallery_imgs/290x190.png");
+  background-repeat: no-repeat;
+  color: white;
   right: 0px;
 }
 section .img3 {
+  position: absolute;
   width: 290px;
   height: 95px;
-  background-image: url("../imgs/gallery_imgs/290x95-1.png");
   top: 200px;
+  background-image: url("../imgs/gallery_imgs/290x95-1.png");
+  background-repeat: no-repeat;
+  color: white;
   right: 0px;
 }
 section .img4 {
+  position: absolute;
   width: 290px;
   height: 95px;
-  background-image: url("../imgs/gallery_imgs/290x95-2.png");
   top: 305px;
+  background-image: url("../imgs/gallery_imgs/290x95-2.png");
+  background-repeat: no-repeat;
+  color: white;
   right: 0px;
 }
 section .img5 {
+  position: absolute;
   width: 490px;
   height: 240px;
-  background-image: url("../imgs/gallery_imgs/490x240-1.png");
   top: 410px;
+  background-image: url("../imgs/gallery_imgs/490x240-1.png");
+  background-repeat: no-repeat;
+  color: white;
 }
 section .img6 {
+  position: absolute;
   width: 490px;
   height: 240px;
-  background-image: url("../imgs/gallery_imgs/490x240-2.png");
   top: 660px;
+  background-image: url("../imgs/gallery_imgs/490x240-2.png");
+  background-repeat: no-repeat;
+  color: white;
 }
 section .img7 {
+  position: absolute;
   width: 500px;
   height: 490px;
-  background-image: url("../imgs/gallery_imgs/500x490.png");
   top: 410px;
+  background-image: url("../imgs/gallery_imgs/500x490.png");
+  background-repeat: no-repeat;
+  color: white;
   right: 0px;
 }
 section .img8 {
+  position: absolute;
   width: 1000px;
   height: 371px;
-  background-image: url("../imgs/gallery_imgs/1000x371.png");
   top: 910px;
+  background-image: url("../imgs/gallery_imgs/1000x371.png");
+  background-repeat: no-repeat;
+  color: white;
 }
 section .img9 {
+  position: absolute;
   width: 1000px;
   height: 361px;
-  background-image: url("../imgs/gallery_imgs/1000x361.png");
   top: 1291px;
+  background-image: url("../imgs/gallery_imgs/1000x361.png");
+  background-repeat: no-repeat;
+  color: white;
 }
 section .img1 p {
   right: 10px;

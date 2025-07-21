@@ -39,11 +39,14 @@
         }
     }
 }
-@mixin gallery_imgs($w, $h, $img, $top, $index){
+@mixin gallery-imgs($w, $h, $img, $top, $index){
+    position: absolute;
     width: $w;
     height: $h;
-    background-image: url($img);
     top: $top;
+    background-image: url($img);
+    background-repeat: no-repeat;
+    color: white;
     @if list.index(cons.$right_side_imgs, $index){ // 오른쪽에 위치해야 하는 이미지들
         right: 0px;
     }
