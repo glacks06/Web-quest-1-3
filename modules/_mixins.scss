@@ -1,6 +1,7 @@
 @use 'sass:color';
 @use './constants' as cons;
 @use "sass:list";
+@use "sass:map";
 
 
 @mixin header-CSS{
@@ -81,4 +82,15 @@
             }
         }
     }
+}
+
+@mixin img-text-style($idx){
+    $style: map.get(cons.$img_text_style_map, $idx);
+    @if map.has-key($style, top)        { top: map.get($style, top); }
+    @if map.has-key($style, left)       { left: map.get($style, left); }
+    @if map.has-key($style, right)      { right: map.get($style, right); }
+    @if map.has-key($style, bottom)     { bottom: map.get($style, bottom); }
+    @if map.has-key($style, font-size)  { font-size: map.get($style, font-size); }
+    @if map.has-key($style, color)      {color: map.get($style, color);}
+    @if map.has-key($style, line-height){line-height: map.get($style, line-height);}
 }

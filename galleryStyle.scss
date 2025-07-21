@@ -1,6 +1,7 @@
 @use './modules/mixins' as mixin;
 @use './modules/constants' as cons;
 @use "sass:list";
+@use "sass:map";
 
 *{
     margin: cons.$default_margin; padding: cons.$default_padding;
@@ -51,63 +52,27 @@ section{
         }
     }
 
-    .img1 {
-        p {
-            right: cons.$img1-p-right;
-            bottom: cons.$img1-p-bottom;
-            font-size: cons.$img1-p-font-size;
-        }
-    }
-    .img2 {
-        p {
-            top: cons.$img2-p-top;
-            left: cons.$img2-p-left;
-            font-size: cons.$img2-p-font-size;
-        }
-    }
-    .img3 {
-        p {
-            right: cons.$img3-p-right;
-            bottom: cons.$img3-p-bottom;
-            font-size: cons.$img3-p-font-size;
-        }
-    }
-    .img5 {
-        p {
-            top: cons.$img5-p-top;
-            left: cons.$img5-p-left;
-            line-height: cons.$img5-p-line-height;
-            color: cons.$img5-p-color;
-        }
-    }
-    .img6 {
-        p {
-            right: cons.$img6-p-right;
-            bottom: cons.$img6-p-bottom;
-            color: cons.$img6-p-color;
-            font-size: cons.$img6-p-font-size;
-        }
-    }
+    .img1 {p {@include mixin.img-text-style(1);}}
+    .img2 {p {@include mixin.img-text-style(2);}}
+    .img3 {p {@include mixin.img-text-style(3);}}
+    .img5 {p {@include mixin.img-text-style(5);}}
+    .img6 {p {@include mixin.img-text-style(6);}}
     .img8 {
         p {
-            margin-top: cons.$img8-p-margin-top;
-            width: cons.$img8-p-width;
+            margin-top: cons.$img8_p_margin_top;
+            width: cons.$img8_p_width;
             @include mixin.center();
-            font-size: cons.$img8-p-font-size;
-            text-shadow: cons.$img8-p-text-shadow-x
-                        cons.$img8-p-text-shadow-y
-                        cons.$img8-p-text-shadow-blur
-                        cons.$img8-p-text-shadow-color;
+            @include mixin.img-text-style(8);
+            text-shadow: cons.$img8_p_text_shadow_x
+                        cons.$img8_p_text_shadow_y
+                        cons.$img8_p_text_shadow_blur
+                        cons.$img8_p_text_shadow_color;
         }
     }
     .img9 {
         p {
-            right: cons.$img9-p-right;
-            bottom: cons.$img9-p-bottom;
-            font-size: cons.$img9-p-font-size;
-            span {
-                font-size: cons.$img9-p-span-font-size;
-            }
+            @include mixin.img-text-style(9);
+            span {font-size: cons.$img9_p_span_font_size;}
         }
     }
 }
