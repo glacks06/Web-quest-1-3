@@ -5,6 +5,7 @@ $default_box_sizing: border-box;
 $default_margin: 0px;
 $default_padding: 0px;
 $default_a_color: black;
+$default_text_decoration: none;
 
 // header
 $header_inner_width: 1180px;
@@ -84,6 +85,7 @@ $img_text_style_map: (
     bottom: 20px,
     font-size: 20px,
   ),
+  4: (),
   5: (
     top: 160px,
     left: 95px,
@@ -96,6 +98,7 @@ $img_text_style_map: (
     color: gold,
     font-size: 40px,
   ),
+  7: (),
   8: (
     font-size: 50px,
   ),

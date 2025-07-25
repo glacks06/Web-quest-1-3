@@ -85,6 +85,7 @@
 }
 
 @mixin img-text-style($idx){
+    position: absolute;
     $style: map.get(cons.$img_text_style_map, $idx);
     @if map.has-key($style, top)        { top: map.get($style, top); }
     @if map.has-key($style, left)       { left: map.get($style, left); }

@@ -10,24 +10,18 @@
     box-sizing: cons.$default_box_sizing;
 }
 a{
-    text-decoration: none;
-    color: black;
+    text-decoration: cons.$default_text_decoration;
+    color: cons.$default_a_color;
 }
 
 /* Header */
-header{
-    @include mixin.header-CSS;
-}
+header{@include mixin.header-CSS;}
 
 // gallery Imgs
 section{
     width: cons.$gallery_section_width;
     margin: cons.$gallery_section_margin_y auto;
     position: relative;
-
-    article{
-        p{position: absolute}
-    }
 
     // gallery img들의 top값들 계산 및 img property 설정
     $imgs_top: ();
@@ -49,30 +43,22 @@ section{
         $top: list.nth($imgs_top, $i);
         .img#{$i}{
             @include mixin.gallery-imgs($w, $h, $path, $top, $i);
+            p {@include mixin.img-text-style($i);}
         }
     }
 
-    .img1 {p {@include mixin.img-text-style(1);}}
-    .img2 {p {@include mixin.img-text-style(2);}}
-    .img3 {p {@include mixin.img-text-style(3);}}
-    .img5 {p {@include mixin.img-text-style(5);}}
-    .img6 {p {@include mixin.img-text-style(6);}}
-    .img8 {
-        p {
+    .img8{
+        p{
             margin-top: cons.$img8_p_margin_top;
             width: cons.$img8_p_width;
             @include mixin.center();
-            @include mixin.img-text-style(8);
             text-shadow: cons.$img8_p_text_shadow_x
-                        cons.$img8_p_text_shadow_y
-                        cons.$img8_p_text_shadow_blur
-                        cons.$img8_p_text_shadow_color;
+                cons.$img8_p_text_shadow_y
+                cons.$img8_p_text_shadow_blur
+                cons.$img8_p_text_shadow_color;
         }
     }
     .img9 {
-        p {
-            @include mixin.img-text-style(9);
-            span {font-size: cons.$img9_p_span_font_size;}
-        }
+        p {span {font-size: cons.$img9_p_span_font_size;}}
     }
 }

@@ -60,9 +60,6 @@ section {
   margin: 120px auto;
   position: relative;
 }
-section article p {
-  position: absolute;
-}
 section .img1 {
   position: absolute;
   width: 700px;
@@ -71,6 +68,12 @@ section .img1 {
   background-image: url("../imgs/gallery_imgs/700x400.png");
   background-repeat: no-repeat;
   color: white;
+}
+section .img1 p {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 30px;
 }
 section .img2 {
   position: absolute;
@@ -82,6 +85,12 @@ section .img2 {
   color: white;
   right: 0px;
 }
+section .img2 p {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  font-size: 20px;
+}
 section .img3 {
   position: absolute;
   width: 290px;
@@ -91,6 +100,12 @@ section .img3 {
   background-repeat: no-repeat;
   color: white;
   right: 0px;
+}
+section .img3 p {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  font-size: 20px;
 }
 section .img4 {
   position: absolute;
@@ -102,6 +117,9 @@ section .img4 {
   color: white;
   right: 0px;
 }
+section .img4 p {
+  position: absolute;
+}
 section .img5 {
   position: absolute;
   width: 490px;
@@ -111,6 +129,13 @@ section .img5 {
   background-repeat: no-repeat;
   color: white;
 }
+section .img5 p {
+  position: absolute;
+  top: 160px;
+  left: 95px;
+  color: black;
+  line-height: 17px;
+}
 section .img6 {
   position: absolute;
   width: 490px;
@@ -119,6 +144,13 @@ section .img6 {
   background-image: url("../imgs/gallery_imgs/490x240-2.png");
   background-repeat: no-repeat;
   color: white;
+}
+section .img6 p {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  font-size: 40px;
+  color: gold;
 }
 section .img7 {
   position: absolute;
@@ -130,6 +162,9 @@ section .img7 {
   color: white;
   right: 0px;
 }
+section .img7 p {
+  position: absolute;
+}
 section .img8 {
   position: absolute;
   width: 1000px;
@@ -138,6 +173,10 @@ section .img8 {
   background-image: url("../imgs/gallery_imgs/1000x371.png");
   background-repeat: no-repeat;
   color: white;
+}
+section .img8 p {
+  position: absolute;
+  font-size: 50px;
 }
 section .img9 {
   position: absolute;
@@ -148,32 +187,11 @@ section .img9 {
   background-repeat: no-repeat;
   color: white;
 }
-section .img1 p {
-  right: 10px;
-  bottom: 10px;
-  font-size: 30px;
-}
-section .img2 p {
-  top: 50px;
-  left: 10px;
+section .img9 p {
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
   font-size: 20px;
-}
-section .img3 p {
-  right: 10px;
-  bottom: 20px;
-  font-size: 20px;
-}
-section .img5 p {
-  top: 160px;
-  left: 95px;
-  color: black;
-  line-height: 17px;
-}
-section .img6 p {
-  right: 20px;
-  bottom: 30px;
-  font-size: 40px;
-  color: gold;
 }
 section .img8 p {
   margin-top: 0px;
@@ -182,13 +200,7 @@ section .img8 p {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 50px;
   text-shadow: 4px 3px 0px black;
-}
-section .img9 p {
-  right: 30px;
-  bottom: 40px;
-  font-size: 20px;
 }
 section .img9 p span {
   font-size: 30px;
