@@ -15,7 +15,10 @@ ul {
 }
 a{
     text-decoration: cons.$default_text_decoration;
-    color: cons.$default_a_color;
+    color: cons.$default_font_color;
+}
+body{
+    background-color: cons.$default_background_color;
 }
 
 /* Header */
@@ -44,6 +47,7 @@ header{
     display: block;
     text-align: center;
     margin: cons.$news_title_margin_y auto;
+    color: cons.$default_font_color
 }
 
 
@@ -51,6 +55,7 @@ $news_article_width: math.div(cons.$news_width, 4) - (cons.$news_article_gap*2);
 section{
     width: cons.$news_width;
     margin: 0 auto;
+    color: cons.$default_font_color;
     article{
         width: $news_article_width; 
         height: cons.$news_article_height;

@@ -15,7 +15,14 @@ a {
   color: black;
 }
 
+body {
+  background-color: white;
+}
+
 /* Header */
+header {
+  color: black;
+}
 header .inner_box {
   position: relative;
   margin: 0 auto;
@@ -81,11 +88,13 @@ header .inner_box .global a:hover {
   display: block;
   text-align: center;
   margin: 25px auto;
+  color: black;
 }
 
 section {
   width: 1180px;
   margin: 0 auto;
+  color: black;
 }
 section article {
   width: 230px;

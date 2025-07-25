@@ -11,7 +11,14 @@ a {
   color: black;
 }
 
+body {
+  background-color: white;
+}
+
 /* Header */
+header {
+  color: black;
+}
 header .inner_box {
   position: relative;
   margin: 0 auto;

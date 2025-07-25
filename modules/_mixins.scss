@@ -5,8 +5,10 @@
 
 
 @mixin header-CSS{
-    $header_global_font_color: cons.$default_a_color;
+    $header_global_font_color: cons.$default_font_color;
     $header_global_font_color_hover: color.adjust($header_global_font_color, $lightness: 80%);
+    // background-color: cons.$default_background_color;
+    color: cons.$default_font_color;
     .inner_box{
         position: relative;
         margin: 0 auto;
