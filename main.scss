@@ -5,25 +5,25 @@
 
 
 *{
-    margin: cons.$default_margin; padding: cons.$default_padding;
-    line-height: cons.$default_line_height;
-    font-family: cons.$default_fontStyle;
-    box-sizing: cons.$default_box_sizing;
+    margin: cons.$default-margin; padding: cons.$default-padding;
+    line-height: cons.$default-line_height;
+    font-family: cons.$default-fontStyle;
+    box-sizing: cons.$default-box_sizing;
 }
 ul {
     list-style-type: none;
 }
 a{
-    text-decoration: cons.$default_text_decoration;
-    color: cons.$default_font_color;
+    text-decoration: cons.$default-text-decoration;
+    color: cons.$default-font-color;
 }
 body{
-    background-color: cons.$default_background_color;
+    background-color: cons.$default-background_color;
 }
 
 /* Header */
 header{
-    @include mixin.header-CSS;
+    @include mixin.header-styles;
 }
 
 /* Main Image */
@@ -32,12 +32,12 @@ header{
     width: 100%;
     overflow: hidden;
     .inner_text{
-        width: cons.$main_text_width; height: cons.$main_text_height;
+        width: cons.$main-text-width; height: cons.$main-text-height;
         margin: 150px auto;
-        font-size: cons.$main_text_font_size;
-        color: cons.$main_text_color;
+        font-size: cons.$main-text-font-size;
+        color: cons.$main-text-color;
         
-        span{font-size: cons.$main_text_title_font_size;}
+        span{font-size: cons.$main-text-title-font-size;}
     }
 }
 
@@ -46,20 +46,20 @@ header{
 #article_title{
     display: block;
     text-align: center;
-    margin: cons.$news_title_margin_y auto;
-    color: cons.$default_font_color
+    margin: cons.$main-news-title-margin-y auto;
+    color: cons.$default-font-color
 }
 
 
-$news_article_width: math.div(cons.$news_width, 4) - (cons.$news_article_gap*2);
+$main-news-article-width: math.div(cons.$main-news-width, 4) - (cons.$main-news-article-gap*2);
 section{
-    width: cons.$news_width;
+    width: cons.$main-news-width;
     margin: 0 auto;
-    color: cons.$default_font_color;
+    color: cons.$default-font-color;
     article{
-        width: $news_article_width; 
-        height: cons.$news_article_height;
-        margin: 0px cons.$news_article_gap;
+        width: $main-news-article-width; 
+        height: cons.$main-news-article-height;
+        margin: 0px cons.$main-news-article-gap;
         float: left;
         line-height: 25px;
     }
@@ -67,7 +67,6 @@ section{
 
 
 /* footer*/
-$footer_font_color_hover: color.adjust(cons.$footer_font_color, $lightness: -20%);
 footer{
     @include mixin.footer-links;
 }
