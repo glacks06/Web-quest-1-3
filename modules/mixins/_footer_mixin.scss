@@ -1,0 +1,26 @@
+@use '../footer_constants' as cons;
+
+@mixin footer-links{
+    $footer_font_color_hover: color.adjust(cons.$footer_font_color, $lightness: -20%);
+    width: 100%; height: cons.$footer_height;
+    overflow: hidden;
+    background-color: cons.$footer_bc_color;
+    color: cons.$footer_font-color;
+    .inner_box{
+        position: relative;
+        width: cons.$footer_inner_width; 
+        margin: cons.$footer_top_space auto;
+        ul{
+            position: absolute;
+            right: cons.$footer_link_offset_x; 
+            top: cons.$footer_link_offset_y;
+            li{
+                font-size: cons.$footer_link_font_size;
+                display: inline-block;
+                padding: 0px cons.$footer_inform_padding_x;
+                a{color: cons.$footer_font_color;}
+                a:hover{color: $footer_font_color_hover;}
+            }
+        }
+    }
+}

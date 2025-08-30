@@ -1,4 +1,4 @@
-@use './constants' as cons;
+@use '../constants' as cons;
 
 $header_inner_width: 1180px;
 $header_inner_height: 120px;
@@ -30,8 +30,8 @@ $header_global_padding_x: 40px;
         .logo{left: $header_logo_offset_x; bottom: $header_logo_offset_y;}
 
         .utility{
-            right: cons.$header_utility_offset_x; 
-            top: cons.$header_utility_offset_y;
+            right: $header_utility_offset_x; 
+            top: $header_utility_offset_y;
             li{
                 display: inline;
                 padding: 0px $header_utility_padding_x;
