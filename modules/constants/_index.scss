@@ -1,4 +1,4 @@
-@forward './default_constants';
-@forward './footer_constants';
-@forward './gallery_constants';
-@forward './main_constants';
+@forward './default_constants' as default-*;
+@forward './footer_constants' as footer-*;
+@forward './gallery_constants' as gallery-*;
+@forward './main_constants' as main-*;
