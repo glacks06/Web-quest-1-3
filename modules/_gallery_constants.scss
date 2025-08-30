@@ -1,0 +1,70 @@
+// gallery
+$gallery_section_width: 1000px;
+$gallery_section_margin_y: 120px;
+
+$img_sources: (
+    (700px, 400px, '../imgs/gallery_imgs/700x400.png'),
+    (290px, 190px, '../imgs/gallery_imgs/290x190.png'),
+    (290px, 95px, '../imgs/gallery_imgs/290x95-1.png'),
+    (290px, 95px, '../imgs/gallery_imgs/290x95-2.png'),
+    (490px, 240px, '../imgs/gallery_imgs/490x240-1.png'),
+    (490px, 240px, '../imgs/gallery_imgs/490x240-2.png'),
+    (500px, 490px, '../imgs/gallery_imgs/500x490.png'),
+    (1000px, 371px, '../imgs/gallery_imgs/1000x371.png'),
+    (1000px, 361px, '../imgs/gallery_imgs/1000x361.png')
+);
+$gallery_imgs_gap: 10px;
+$gallery_imgs_height: (400px, 190px, 95px, 95px, 240px, 240px, 490px, 371px, 361px); // 각 img들의 height 값
+
+$img_text_style_map: (
+    1: (right )
+);
+
+$img_text_style_map: (
+  1: (
+    right: 10px,
+    bottom: 10px,
+    font-size: 30px,
+  ),
+  2: (
+    top: 50px,
+    left: 10px,
+    font-size: 20px,
+  ),
+  3: (
+    right: 10px,
+    bottom: 20px,
+    font-size: 20px,
+  ),
+  4: (),
+  5: (
+    top: 160px,
+    left: 95px,
+    line-height: 17px,
+    color: black,
+  ),
+  6: (
+    right: 20px,
+    bottom: 30px,
+    color: gold,
+    font-size: 40px,
+  ),
+  7: (),
+  8: (
+    font-size: 50px,
+  ),
+  9: (
+    right: 30px,
+    bottom: 40px,
+    font-size: 20px,
+  ),
+);
+$img8_p_margin_top: 0px;
+$img8_p_width: 100%;
+$img8_p_text_shadow_x: 4px;
+$img8_p_text_shadow_y: 3px;
+$img8_p_text_shadow_blur: 0px;
+$img8_p_text_shadow_color: black;
+$img9_p_span_font_size: 30px;
+
+$right_side_imgs: (2, 3, 4, 7);

@@ -4,44 +4,7 @@
 @use "sass:map";
 
 
-@mixin header-CSS{
-    $header_global_font_color: cons.$default_font_color;
-    $header_global_font_color_hover: color.adjust($header_global_font_color, $lightness: 80%);
-    // background-color: cons.$default_background_color;
-    color: cons.$default_font_color;
-    .inner_box{
-        position: relative;
-        margin: 0 auto;
-        width: cons.$header_inner_width; 
-        height: cons.$header_inner_height;
-        h1{position: absolute;}
-        ul{position: absolute;}
 
-        .logo{left: cons.$header_logo_offset_x; bottom: cons.$header_logo_offset_y;}
-
-        .utility{
-            right: cons.$header_utility_offset_x; 
-            top: cons.$header_utility_offset_y;
-            li{
-                display: inline;
-                padding: 0px cons.$header_utility_padding_x;
-                font-size: cons.$header_utility_font_size;
-            }
-            a{color: darkgray;}
-        }
-
-        .global{
-            right: cons.$header_global_offset_x;
-            bottom: cons.$header_global_offset_y; 
-            li{
-                display: inline;
-                padding: 0px cons.$header_global_padding_x;
-            }
-            a{color: $header_global_font_color;}
-            a:hover{color: $header_global_font_color_hover;}
-        }
-    }
-}
 @mixin gallery-imgs($w, $h, $img, $top, $index){
     position: absolute;
     width: $w;

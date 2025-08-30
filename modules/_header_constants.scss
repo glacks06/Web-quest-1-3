@@ -1,0 +1,54 @@
+@use './constants' as cons;
+
+$header_inner_width: 1180px;
+$header_inner_height: 120px;
+$header_logo_offset_x: 10px;
+$header_logo_offset_y: 15px;
+
+$header_utility_padding_x: 10px;
+$header_utility_offset_x: 30px;
+$header_utility_offset_y: 20px;
+$header_utility_font_size: 12px;
+
+$header_global_offset_x: 0px;
+$header_global_offset_y: 0px;
+$header_global_padding_x: 40px;
+
+@mixin header-CSS{
+    $header_global_font_color: cons.$default_font_color;
+    $header_global_font_color_hover: color.adjust($header_global_font_color, $lightness: 80%);
+
+    color: cons.$default_font_color;
+    .inner_box{
+        position: relative;
+        margin: 0 auto;
+        width: $header_inner_width; 
+        height: $header_inner_height;
+        h1{position: absolute;}
+        ul{position: absolute;}
+
+        .logo{left: $header_logo_offset_x; bottom: $header_logo_offset_y;}
+
+        .utility{
+            right: cons.$header_utility_offset_x; 
+            top: cons.$header_utility_offset_y;
+            li{
+                display: inline;
+                padding: 0px $header_utility_padding_x;
+                font-size: $header_utility_font_size;
+            }
+            a{color: darkgray;}
+        }
+
+        .global{
+            right: $header_global_offset_x;
+            bottom: $header_global_offset_y; 
+            li{
+                display: inline;
+                padding: 0px $header_global_padding_x;
+            }
+            a{color: $header_global_font_color;}
+            a:hover{color: $header_global_font_color_hover;}
+        }
+    }
+}
