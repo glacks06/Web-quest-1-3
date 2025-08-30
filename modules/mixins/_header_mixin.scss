@@ -14,7 +14,7 @@ $header_global_offset_x: 0px;
 $header_global_offset_y: 0px;
 $header_global_padding_x: 40px;
 
-@mixin header-CSS{
+@mixin styles{
     $header_global_font_color: cons.$default_font_color;
     $header_global_font_color_hover: color.adjust($header_global_font_color, $lightness: 80%);
 

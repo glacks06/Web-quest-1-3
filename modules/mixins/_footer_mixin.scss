@@ -1,6 +1,6 @@
 @use '../footer_constants' as cons;
 
-@mixin footer-links{
+@mixin links{
     $footer_font_color_hover: color.adjust(cons.$footer_font_color, $lightness: -20%);
     width: 100%; height: cons.$footer_height;
     overflow: hidden;
