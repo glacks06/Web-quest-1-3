@@ -4,18 +4,9 @@
 @use "sass:map";
 
 *{
-    margin: cons.$default-margin; padding: cons.$default-padding;
-    line-height: cons.$default-line-height;
-    font-family: cons.$default-fontStyle;
-    box-sizing: cons.$default-box-sizing;
+    @include mixin.default-setting;
 }
-a{
-    text-decoration: cons.$default-text-decoration;
-    color: cons.$default-font-color;
-}
-body{
-    background-color: cons.$default-background-color;
-}
+
 
 /* Header */
 header{@include mixin.header-styles;}

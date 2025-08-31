@@ -1,0 +1,18 @@
+@use '../constants' as cons;
+
+@mixin setting{
+    margin: cons.$default-margin; padding: cons.$default-padding;
+    line-height: cons.$default-line_height;
+    font-family: cons.$default-fontStyle;
+    box-sizing: cons.$default-box_sizing;
+    ul {
+        list-style-type: none;
+    }
+    a{
+        text-decoration: cons.$default-text-decoration;
+        color: cons.$default-font-color;
+    }
+    body{
+        background-color: cons.$default-background_color;
+    }
+}

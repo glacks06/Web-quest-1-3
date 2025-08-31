@@ -1,4 +1,5 @@
 @use '../constants' as cons;
+@use 'sass:color';
 
 @mixin links{
     $footer-font-color-hover: color.adjust(cons.$footer-font-color, $lightness: -20%);

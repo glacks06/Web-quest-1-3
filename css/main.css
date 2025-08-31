@@ -5,17 +5,14 @@
   font-family: verdana;
   box-sizing: border-box;
 }
-
-ul {
+* ul {
   list-style-type: none;
 }
-
-a {
+* a {
   text-decoration: none;
   color: black;
 }
-
-body {
+* body {
   background-color: white;
 }
 
@@ -132,6 +129,4 @@ footer .inner_box ul li a {
 }
 footer .inner_box ul li a:hover {
   color: rgba(109, 109, 109, 0.788);
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
