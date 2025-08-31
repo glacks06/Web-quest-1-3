@@ -4,46 +4,46 @@
 @use "sass:map";
 
 *{
-    margin: cons.$default_margin; padding: cons.$default_padding;
-    line-height: cons.$default_line_height;
-    font-family: cons.$default_fontStyle;
-    box-sizing: cons.$default_box_sizing;
+    margin: cons.$default-margin; padding: cons.$default-padding;
+    line-height: cons.$default-line-height;
+    font-family: cons.$default-fontStyle;
+    box-sizing: cons.$default-box-sizing;
 }
 a{
-    text-decoration: cons.$default_text_decoration;
-    color: cons.$default_font_color;
+    text-decoration: cons.$default-text-decoration;
+    color: cons.$default-font-color;
 }
 body{
-    background-color: cons.$default_background_color;
+    background-color: cons.$default-background-color;
 }
 
 /* Header */
-header{@include mixin.header-CSS;}
+header{@include mixin.header-styles;}
 
-// gallery Imgs
+// // gallery Imgs
 section{
-    width: cons.$gallery_section_width;
-    margin: cons.$gallery_section_margin_y auto;
+    width: cons.$gallery-section-width;
+    margin: cons.$gallery-section-margin-y auto;
     position: relative;
 
     // gallery img들의 top값들 계산 및 img property 설정
-    $imgs_top: ();
-    @for $i from 1 through list.length(cons.$img_sources){
+    $imgs-top: ();
+    @for $i from 1 through list.length(cons.$gallery-img-sources){
         @if $i == 1 or $i == 2{
-            $imgs_top: list.append($imgs_top, 0);
+            $imgs-top: list.append($imgs-top, 0);
         }
         @else if $i == 7{
-            $imgs_top: list.append($imgs_top, list.nth($imgs_top, $i - 3) + list.nth(cons.$gallery_imgs_height, $i - 3) + cons.$gallery_imgs_gap);
+            $imgs-top: list.append($imgs-top, list.nth($imgs-top, $i - 3) + list.nth(cons.$gallery-imgs-height, $i - 3) + cons.$gallery-imgs-gap);
         }
         @else{
-            $imgs_top: list.append($imgs_top, list.nth($imgs_top, $i - 1) + list.nth(cons.$gallery_imgs_height, $i - 1) + cons.$gallery_imgs_gap);
+            $imgs-top: list.append($imgs-top, list.nth($imgs-top, $i - 1) + list.nth(cons.$gallery-imgs-height, $i - 1) + cons.$gallery-imgs-gap);
         }
 
-        $item: list.nth(cons.$img_sources, $i);
+        $item: list.nth(cons.$gallery-img-sources, $i);
         $w: list.nth($item, 1);
         $h: list.nth($item, 2);
         $path: list.nth($item, 3);
-        $top: list.nth($imgs_top, $i);
+        $top: list.nth($imgs-top, $i);
         .img#{$i}{
             @include mixin.gallery-imgs($w, $h, $path, $top, $i);
             p {@include mixin.img-text-style($i);}
@@ -52,16 +52,16 @@ section{
 
     .img8{
         p{
-            margin-top: cons.$img8_p_margin_top;
-            width: cons.$img8_p_width;
+            margin-top: cons.$gallery-img8-p-margin-top;
+            width: cons.$gallery-img8-p-width;
             @include mixin.center();
-            text-shadow: cons.$img8_p_text_shadow_x
-                cons.$img8_p_text_shadow_y
-                cons.$img8_p_text_shadow_blur
-                cons.$img8_p_text_shadow_color;
+            text-shadow: cons.$gallery-img8-p-text-shadow-x
+                cons.$gallery-img8-p-text-shadow-y
+                cons.$gallery-img8-p-text-shadow-blur
+                cons.$gallery-img8-p-text-shadow-color;
         }
     }
     .img9 {
-        p {span {font-size: cons.$img9_p_span_font_size;}}
+        p {span {font-size: cons.$gallery-img9-p-span-font-size;}}
     }
 }

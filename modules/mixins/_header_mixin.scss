@@ -1,54 +1,56 @@
 @use '../constants' as cons;
+@use 'sass:color';
 
-$header_inner_width: 1180px;
-$header_inner_height: 120px;
-$header_logo_offset_x: 10px;
-$header_logo_offset_y: 15px;
+$header-inner-width: 1180px;
+$header-inner-height: 120px;
+$header-logo-offset-x: 10px;
+$header-logo-offset-y: 15px;
 
-$header_utility_padding_x: 10px;
-$header_utility_offset_x: 30px;
-$header_utility_offset_y: 20px;
-$header_utility_font_size: 12px;
+$header-utility-padding-x: 10px;
+$header-utility-offset-x: 30px;
+$header-utility-offset-y: 20px;
+$header-utility-font-size: 12px;
 
-$header_global_offset_x: 0px;
-$header_global_offset_y: 0px;
-$header_global_padding_x: 40px;
+$header-global-offset-x: 0px;
+$header-global-offset-y: 0px;
+$header-global-padding-x: 40px;
 
 @mixin styles{
-    $header_global_font_color: cons.$default_font_color;
-    $header_global_font_color_hover: color.adjust($header_global_font_color, $lightness: 80%);
+    $header-global-font-color: cons.$default-font-color;
+    $header-global-font-color-hover: color.adjust($header-global-font-color, $lightness: 80%);
 
-    color: cons.$default_font_color;
+    color: cons.$default-font-color;
     .inner_box{
         position: relative;
         margin: 0 auto;
-        width: $header_inner_width; 
-        height: $header_inner_height;
+        width: $header-inner-width; 
+        height: $header-inner-height;
         h1{position: absolute;}
         ul{position: absolute;}
 
-        .logo{left: $header_logo_offset_x; bottom: $header_logo_offset_y;}
+        .logo{left: $header-logo-offset-x; bottom: $header-logo-offset-y;}
 
         .utility{
-            right: $header_utility_offset_x; 
-            top: $header_utility_offset_y;
+            right: $header-utility-offset-x; 
+            top: $header-utility-offset-y;
             li{
                 display: inline;
-                padding: 0px $header_utility_padding_x;
-                font-size: $header_utility_font_size;
+                padding: 0px $header-utility-padding-x;
+                font-size: $header-utility-font-size;
             }
             a{color: darkgray;}
         }
 
         .global{
-            right: $header_global_offset_x;
-            bottom: $header_global_offset_y; 
+            right: $header-global-offset-x;
+            bottom: $header-global-offset-y; 
             li{
                 display: inline;
-                padding: 0px $header_global_padding_x;
+                padding: 0px $header-global-padding-x;
             }
-            a{color: $header_global_font_color;}
-            a:hover{color: $header_global_font_color_hover;}
+            a{color: $header-global-font-color;}
+            a:hover{color: $header-global-font-color-hover;}
+            
         }
     }
 }

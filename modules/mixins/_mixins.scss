@@ -1,5 +1,5 @@
 @use 'sass:color';
-@use '../gallery_constants' as cons;
+@use '../constants' as cons;
 @use "sass:list";
 @use "sass:map";
 
@@ -11,7 +11,7 @@
     background-image: url($img);
     background-repeat: no-repeat;
     color: white;
-    @if list.index(cons.$right_side_imgs, $index){ // 오른쪽에 위치해야 하는 이미지들
+    @if list.index(cons.$gallery-right-side-imgs, $index){ // 오른쪽에 위치해야 하는 이미지들
         right: 0px;
     }
 }
@@ -24,7 +24,7 @@
 
 @mixin img-text-style($idx){
     position: absolute;
-    $style: map.get(cons.$img_text_style_map, $idx);
+    $style: map.get(cons.$gallery-img-text-style-map, $idx);
     @if map.has-key($style, top)        { top: map.get($style, top); }
     @if map.has-key($style, left)       { left: map.get($style, left); }
     @if map.has-key($style, right)      { right: map.get($style, right); }
