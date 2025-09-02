@@ -7,7 +7,6 @@
     @include mixin.default-setting;
 }
 
-
 /* Header */
 header{@include mixin.header-styles;}
 
@@ -37,7 +36,7 @@ section{
         $top: list.nth($imgs-top, $i);
         .img#{$i}{
             @include mixin.gallery-imgs($w, $h, $path, $top, $i);
-            p {@include mixin.img-text-style($i);}
+            p {@include mixin.gallery-img-text-style($i);}
         }
     }
 
@@ -45,7 +44,7 @@ section{
         p{
             margin-top: cons.$gallery-img8-p-margin-top;
             width: cons.$gallery-img8-p-width;
-            @include mixin.center();
+            @include mixin.gallery-center();
             text-shadow: cons.$gallery-img8-p-text-shadow-x
                 cons.$gallery-img8-p-text-shadow-y
                 cons.$gallery-img8-p-text-shadow-blur

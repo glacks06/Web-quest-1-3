@@ -3,7 +3,7 @@
 @use "sass:list";
 @use "sass:map";
 
-@mixin gallery-imgs($w, $h, $img, $top, $index){
+@mixin imgs($w, $h, $img, $top, $index){
     position: absolute;
     width: $w;
     height: $h;

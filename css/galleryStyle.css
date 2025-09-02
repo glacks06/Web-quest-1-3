@@ -5,13 +5,14 @@
   font-family: verdana;
   box-sizing: border-box;
 }
-
-a {
+* ul {
+  list-style-type: none;
+}
+* a {
   text-decoration: none;
   color: black;
 }
-
-body {
+* body {
   background-color: white;
 }
 
