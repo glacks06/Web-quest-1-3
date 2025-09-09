@@ -2,6 +2,7 @@
 $section_width: 1000px;
 $section_margin_y: 120px;
 
+// 이미지 주소 map
 $img_sources: (
     (700px, 400px, '../imgs/gallery_imgs/700x400.png'),
     (290px, 190px, '../imgs/gallery_imgs/290x190.png'),
@@ -16,10 +17,7 @@ $img_sources: (
 $imgs_gap: 10px;
 $imgs_height: (400px, 190px, 95px, 95px, 240px, 240px, 490px, 371px, 361px); // 각 img들의 height 값
 
-$img_text_style_map: (
-    1: (right )
-);
-
+// gallery페이지의 각 사진에 따른 위치, 폰트 정보들
 $img_text_style_map: (
   1: (
     right: 10px,
