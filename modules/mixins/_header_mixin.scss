@@ -2,8 +2,6 @@
 @use 'sass:color';
 
 @mixin styles{
-    $header-global-font-color: cons.$default-font-color;
-    $header-global-font-color-hover: color.adjust($header-global-font-color, $lightness: 80%);
 
     color: cons.$default-font-color;
     .inner_box{
@@ -34,8 +32,8 @@
                 display: inline;
                 padding: 0px cons.$header-global-padding-x;
             }
-            a{color: $header-global-font-color;}
-            a:hover{color: $header-global-font-color-hover;}
+            a{color: cons.$header-global-font-color;}
+            a:hover{color: cons.$header-global-font-color-hover;}
             
         }
     }

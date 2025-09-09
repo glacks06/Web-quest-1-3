@@ -1,3 +1,6 @@
+@use './default_constants' as default-cons;
+@use 'sass:color';
+
 $inner-width: 1180px;
 $inner-height: 120px;
 $logo-offset-x: 10px;
@@ -7,6 +10,9 @@ $utility-padding-x: 10px;
 $utility-offset-x: 30px;
 $utility-offset-y: 20px;
 $utility-font-size: 12px;
+
+$global-font-color: default-cons.$font-color;
+$global-font-color-hover: color.adjust($global-font-color, $lightness: 80%);
 
 $global-offset-x: 0px;
 $global-offset-y: 0px;
