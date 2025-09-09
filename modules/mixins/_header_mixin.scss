@@ -1,20 +1,6 @@
 @use '../constants' as cons;
 @use 'sass:color';
 
-$header-inner-width: 1180px;
-$header-inner-height: 120px;
-$header-logo-offset-x: 10px;
-$header-logo-offset-y: 15px;
-
-$header-utility-padding-x: 10px;
-$header-utility-offset-x: 30px;
-$header-utility-offset-y: 20px;
-$header-utility-font-size: 12px;
-
-$header-global-offset-x: 0px;
-$header-global-offset-y: 0px;
-$header-global-padding-x: 40px;
-
 @mixin styles{
     $header-global-font-color: cons.$default-font-color;
     $header-global-font-color-hover: color.adjust($header-global-font-color, $lightness: 80%);
@@ -23,30 +9,30 @@ $header-global-padding-x: 40px;
     .inner_box{
         position: relative;
         margin: 0 auto;
-        width: $header-inner-width; 
-        height: $header-inner-height;
+        width: cons.$header-inner-width; 
+        height: cons.$header-inner-height;
         h1{position: absolute;}
         ul{position: absolute;}
 
-        .logo{left: $header-logo-offset-x; bottom: $header-logo-offset-y;}
+        .logo{left: cons.$header-logo-offset-x; bottom: cons.$header-logo-offset-y;}
 
         .utility{
-            right: $header-utility-offset-x; 
-            top: $header-utility-offset-y;
+            right: cons.$header-utility-offset-x; 
+            top: cons.$header-utility-offset-y;
             li{
                 display: inline;
-                padding: 0px $header-utility-padding-x;
-                font-size: $header-utility-font-size;
+                padding: 0px cons.$header-utility-padding-x;
+                font-size: cons.$header-utility-font-size;
             }
             a{color: darkgray;}
         }
 
         .global{
-            right: $header-global-offset-x;
-            bottom: $header-global-offset-y; 
+            right: cons.$header-global-offset-x;
+            bottom: cons.$header-global-offset-y; 
             li{
                 display: inline;
-                padding: 0px $header-global-padding-x;
+                padding: 0px cons.$header-global-padding-x;
             }
             a{color: $header-global-font-color;}
             a:hover{color: $header-global-font-color-hover;}
